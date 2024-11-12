@@ -41,7 +41,8 @@
    :mb-db-automigrate               "true"
    :mb-db-logging                   "true"
    ;; Jetty Settings. Full list of options is available here: https://github.com/ring-clojure/ring/blob/master/ring-jetty-adapter/src/ring/adapter/jetty.clj
-   :mb-jetty-port                   "3000"
+   :mb-jetty-port                   (or (System/getenv "PORT") "3000")
+
    :mb-jetty-join                   "true"
    ;; other application settings
    :mb-password-complexity          "normal"
