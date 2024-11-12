@@ -1,9 +1,6 @@
 name: Deploy to Heroku
 
 on:
-  push:
-    branches:
-      - "staging"
   workflow_run:
     workflows: ["Sample"]
     types: [completed, success]
