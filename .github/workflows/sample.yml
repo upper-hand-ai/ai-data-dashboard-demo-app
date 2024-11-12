@@ -1,0 +1,18 @@
+name: Sample
+
+on:
+  push:
+    branches:
+      - "staging"
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, labeled]
+    branches:
+      - "staging"
+    
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    name: Print Message
+    steps:
+      - name: Print Message
+        run: echo "First workflow running"
