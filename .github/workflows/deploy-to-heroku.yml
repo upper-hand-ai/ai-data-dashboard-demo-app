@@ -1,7 +1,6 @@
 name: Deploy to Heroku
 
 on:
-  workflow_dispatch: {}
   workflow_run:
     workflows: ["Frontend", "Backend"]
     types: [completed, success]
