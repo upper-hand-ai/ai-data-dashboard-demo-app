@@ -3,7 +3,7 @@ name: Backend
 on:
   push:
     branches:
-      - "staging"
+      - "master"
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review, labeled]
 
